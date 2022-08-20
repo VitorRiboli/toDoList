@@ -1,5 +1,107 @@
-*{
+/* All */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-primary: #102f5e;
+    --color-secundary: #fdfdfd;
+    --text-color-primary: #3d3d3d;
+    --text-color-secondary: #ffffff;
+}
+
+body {
+    background: rgb(17, 25, 94);
+    background: linear-gradient(90deg, rgba(17, 25, 94, 1) 0%, rgba(25, 61, 157, 1) 50%, rgba(15, 117, 219, 1) 100%);
+}
+/*
+change theme
+background: rgb(94,17,17);
+background: linear-gradient(90deg, rgba(94,17,17,1) 0%, rgba(157,25,25,1) 50%, rgba(219,15,15,1) 100%);
+*/
+
+button {
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: .3rem .6rem;
+    font-size: .7rem;
+    cursor: pointer;
+    align-items: center;
+    transition: .3s;
+    border-radius: 8px;
+}
+
+button:hover {
+    font-size: .8rem;
+    background-color: var(--color-primary);
+    color: var(--color-secundary);
+    border: 2px solid var(--text-color-primary);
+}
+button:hover > i {
+    color: var(--color-secundary);
+    margin: auto 0;
+}
+
+button i {
+    color: var(--color-primary);
+    font-weight: bold;
+    pointer-events: none;
+}
+
+input, select {
+    padding: .2rem .4rem;
+}
+
+/*
+.hide {
+    display: none;
+}*/
+
+/* todo header */
+.todo-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 4rem auto;
+    background-color: var(--color-secundary);
+    color: var(--text-color-primary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 2px 2px 12px var(--text-color-primary);
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid var(--text-color-primary);
+}
+
+/* todo form */
+#todo-form, #edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid var(--text-color-primary);
+}
+
+#todo-form p,
+#edit-form p {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-control input {
+    margin-right: 0.3rem;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
 }
