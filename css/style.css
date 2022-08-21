@@ -9,38 +9,34 @@
 }
 
 :root {
-    --color-primary: #102f5e;
+    --color-primary: #15438a;
     --color-secundary: #fdfdfd;
     --text-color-primary: #3d3d3d;
     --text-color-secondary: #ffffff;
     --bg-color: #9b0202;
-    --bg-color-primary: #e70e0a;
+    --bg-color-primary: #ff0400;
+    --br-color-smoke: rgb(214, 212, 212);
+    --bg-color-gray: #383838;
 }
 
 body {
-    background: rgb(17, 25, 94);
-    background: linear-gradient(90deg, rgba(17, 25, 94, 1) 0%, rgba(25, 61, 157, 1) 50%, rgba(15, 117, 219, 1) 100%);
+    background: rgb(40, 40, 41);
+    background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(52, 52, 52) 50%,rgb(71, 71, 71) 100%);
 }
-/*
-change theme
-background: rgb(94,17,17);
-background: linear-gradient(90deg, rgba(94,17,17,1) 0%, rgba(157,25,25,1) 50%, rgba(219,15,15,1) 100%);
-*/
 
 button {
     background-color: var(--color-secundary);
     color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    border: 1px solid var(--color-primary);
     padding: .3rem .6rem;
     font-size: .7rem;
     cursor: pointer;
     align-items: center;
     transition: .3s;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 button:hover {
-    font-size: .8rem;
     background-color: var(--color-primary);
     color: var(--color-secundary);
 }
@@ -52,14 +48,24 @@ button:hover > i {
 
 .finish-todo {
     background-color: var(--color-primary);
+    border: none;
 }
 
 .finish-todo i {
     color: var(--color-secundary);
 }
 
+.finish-todo:hover {
+    background-color: var(--color-secundary);
+}
+
+.finish-todo:hover > i {
+    color: var(--color-primary);
+}
+
 .remove-todo {
     background-color: var(--bg-color);
+    border: none;
 }
 
 .remove-todo:hover {
@@ -90,11 +96,11 @@ input, select {
     width: 100%;
     max-width: 450px;
     margin: 4rem auto;
-    background-color: var(--color-secundary);
+    background-color: var(--br-color-smoke);
     color: var(--text-color-primary);
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 2px 2px 12px var(--text-color-primary);
+    box-shadow: 2px 4px 15px rgba(10, 10, 10, .7);
 }
 
 .todo-container header {
@@ -131,7 +137,7 @@ input, select {
 /* todo toolbar */
 #toolbar {
     padding: 1rem;
-    border-bottom: 1px solid var(--color-secundary);
+    border-bottom: 1px solid var(--text-color-primary);
     display: flex;
 }
 
@@ -167,4 +173,32 @@ input, select {
     flex: 1;
 }
 
+/* Todo List */
 
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--text-color-primary);
+}
+
+.todo h3 {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.todo button {
+    margin-left: .3rem;
+}
+
+.done {
+    background-color: var(--bg-color-gray);
+}
+
+.done h3 {
+    color: var(--text-color-secondary);
+    text-decoration: line-through;
+    font-style: italic;
+}
