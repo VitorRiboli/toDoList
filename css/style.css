@@ -13,6 +13,8 @@
     --color-secundary: #fdfdfd;
     --text-color-primary: #3d3d3d;
     --text-color-secondary: #ffffff;
+    --bg-color: #9b0202;
+    --bg-color-primary: #e70e0a;
 }
 
 body {
@@ -41,11 +43,31 @@ button:hover {
     font-size: .8rem;
     background-color: var(--color-primary);
     color: var(--color-secundary);
-    border: 2px solid var(--text-color-primary);
 }
+
 button:hover > i {
     color: var(--color-secundary);
     margin: auto 0;
+}
+
+.finish-todo {
+    background-color: var(--color-primary);
+}
+
+.finish-todo i {
+    color: var(--color-secundary);
+}
+
+.remove-todo {
+    background-color: var(--bg-color);
+}
+
+.remove-todo:hover {
+    background-color: var(--bg-color-primary);
+}
+
+.remove-todo i {
+    color: var(--color-secundary);
 }
 
 button i {
@@ -105,3 +127,22 @@ input, select {
 #cancel-edit-btn {
     margin-top: 1rem;
 }
+
+/* todo toolbar */
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-secundary);
+    display: flex;
+}
+
+#toolbar h4 {
+    margin-bottom: .5rem;
+}
+
+#search {
+    border-right: 1px solid var(--text-color-primary);
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+}
+
