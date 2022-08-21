@@ -181,6 +181,7 @@ input, select {
     align-items: center;
     padding: 1rem;
     border-bottom: 1px solid var(--text-color-primary);
+    margin-top: 2px;
 }
 
 .todo h3 {
@@ -195,6 +196,7 @@ input, select {
 
 .done {
     background-color: var(--bg-color-gray);
+    border-radius: 5px;
 }
 
 .done h3 {
